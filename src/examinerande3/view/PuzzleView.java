@@ -47,7 +47,14 @@ public class PuzzleView extends JFrame {
     public void updateBoard(String[][] grid) {
         for (int r = 0; r < grid.length; r++) {
             for (int c = 0; c < grid[0].length; c++) {
+                String tileValue = grid[r][c];
                 buttons[r][c].setText(grid[r][c]);
+                
+                if (!tileValue.equals("") && Integer.parseInt(tileValue) % 2 != 0) {
+                    buttons[r][c].setBackground(Color.RED);
+                } else  {
+                    buttons[r][c].setBackground(null);
+                }
             }
         }
     }
