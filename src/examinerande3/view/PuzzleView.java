@@ -50,7 +50,6 @@ public class PuzzleView extends JFrame {
                 String tileValue = grid[r][c];
                 buttons[r][c].setText(grid[r][c]);
                 
-
                 if (!tileValue.equals("") && Integer.parseInt(tileValue) % 2 != 0) {
                     buttons[r][c].setBackground(Color.RED);
                 } else  {
